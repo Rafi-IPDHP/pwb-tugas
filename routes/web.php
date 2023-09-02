@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('template.page.index');
 });
+
+Route::get('/anggota', function() {
+    return view('template.page.anggota');
+})->name('anggota');
