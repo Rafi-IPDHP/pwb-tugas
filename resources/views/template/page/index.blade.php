@@ -1,5 +1,7 @@
 @extends('template.welcome')
 
+@section('title', 'Blank Page')
+
 @section('content')
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->

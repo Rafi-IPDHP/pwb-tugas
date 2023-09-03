@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnggotaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('template.page.index');
-});
+})->name('blank_page');
 
-Route::get('/anggota', function() {
-    return view('template.page.anggota');
-})->name('anggota');
+// Route::get('/anggota', function() {
+//     return view('template.page.anggota');
+// })->name('anggota');
+
+Route::get('/anggota', [AnggotaController::class, 'create'])->name('anggota');
+
+// ! DATA ANGGOTA, PETUGAS, BUKU
