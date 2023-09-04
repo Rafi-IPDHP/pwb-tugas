@@ -19,7 +19,7 @@ class BukuController extends Controller
      */
     public function create()
     {
-        //
+        return view('template.page.buku');
     }
 
     /**

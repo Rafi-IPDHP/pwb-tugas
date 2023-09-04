@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AnggotaController;
+use App\Http\Controllers\BukuController;
+use App\Http\Controllers\PetugasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,5 +25,7 @@ Route::get('/', function () {
 // })->name('anggota');
 
 Route::get('/anggota', [AnggotaController::class, 'create'])->name('anggota');
+Route::get('/buku', [BukuController::class, 'create'])->name('buku');
+Route::get('/petugas', [PetugasController::class, 'create'])->name('petugas');
 
 // ! DATA ANGGOTA, PETUGAS, BUKU
