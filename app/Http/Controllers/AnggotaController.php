@@ -19,7 +19,7 @@ class AnggotaController extends Controller
      */
     public function create()
     {
-        return view('template.page.anggota');
+        return view('anggota.create');
     }
 
     /**

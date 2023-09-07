@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('template.page.index');
+    return view('index');
 })->name('blank_page');
 
 // Route::get('/anggota', function() {
