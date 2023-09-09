@@ -28,4 +28,5 @@ Route::get('/anggota', [AnggotaController::class, 'create'])->name('anggota');
 Route::get('/buku', [BukuController::class, 'create'])->name('buku');
 Route::get('/petugas', [PetugasController::class, 'create'])->name('petugas');
 
+// * https://kelasprogrammer.com/contoh-database-perpustakaan-mysql/
 // ! DATA ANGGOTA, PETUGAS, BUKU
