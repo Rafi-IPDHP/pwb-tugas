@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('bukus', function (Blueprint $table) {
             $table->id();
-            $table->string('kode_buku', 5);
+            $table->char('kode_buku', 5);
             $table->string('judul_buku', 50);
             $table->string('penulis_buku', 50);
-            $table->string('tahun_terbit', 4);
-            $table->foreignId('stok');
+            $table->char('tahun_terbit', 4);
+            $table->integer('stok');
             $table->timestamps();
         });
     }
