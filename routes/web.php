@@ -24,9 +24,8 @@ Route::get('/', function () {
 //     return view('template.page.anggota');
 // })->name('anggota');
 
-Route::get('/anggota', [AnggotaController::class, 'create'])->name('anggota');
-Route::get('/buku', [BukuController::class, 'create'])->name('buku');
-Route::get('/petugas', [PetugasController::class, 'create'])->name('petugas');
+Route::resource('/anggota', AnggotaController::class);
+Route::resource('/buku', BukuController::class);
+Route::resource('/petugas', PetugasController::class);
 
 // * https://kelasprogrammer.com/contoh-database-perpustakaan-mysql/
-// ! DATA ANGGOTA, PETUGAS, BUKU

@@ -25,26 +25,50 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="{{ route('anggota') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{ route('petugas.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Petugas
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('anggota.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Anggota
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('buku') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{ route('buku.create') }}" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
               <p>
                 Buku
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('petugas') }}" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Petugas
+                Rak
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-arrow-right peminjaman"></i>
+              <p>
+                Peminjaman
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-arrow-left pengembalian"></i>
+              <p>
+                Pengembalian
               </p>
             </a>
           </li>
