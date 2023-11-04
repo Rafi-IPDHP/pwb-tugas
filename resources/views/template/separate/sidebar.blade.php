@@ -41,7 +41,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('buku.create') }}" class="nav-link">
+            <a href="{{ route('buku.index') }}" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Buku

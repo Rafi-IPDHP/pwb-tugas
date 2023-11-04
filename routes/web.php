@@ -3,6 +3,7 @@
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\PetugasController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,5 +28,9 @@ Route::get('/', function () {
 Route::resource('/anggota', AnggotaController::class);
 Route::resource('/buku', BukuController::class);
 Route::resource('/petugas', PetugasController::class);
+
+Route::controller(AuthController::class)->group(function() {
+    Route::post('/proses', 'prosesAnggota')->name('auth.prosesAnggota');
+});
 
 // * https://kelasprogrammer.com/contoh-database-perpustakaan-mysql/
