@@ -13,7 +13,11 @@
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
       <li class="nav-item">
-        <a href="#" class="btn btn-sm btn-primary me-3" hidden>Login</a>
+        @if (Auth::check())
+        <a href="{{ route('logout') }}" class="btn btn-sm btn-danger me-3">Logout</a>
+        @else
+        <a href="{{ route('blank_page') }}" class="btn btn-sm btn-primary me-3">Login</a>
+        @endif
       </li>
   </ul>
 </nav>

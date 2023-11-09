@@ -12,7 +12,7 @@
             <h1 class="text-center">Data Anggota</h1>
           </div>
         </div>
-      </div><!-- /.container-fluid -->
+      </div>
     </section>
 
     <!-- Main content -->
@@ -35,6 +35,9 @@
                         <div class="mb-2">
                             <label for="nama_anggota" class="form-label">Nama Anggota</label>
                             <input type="text" name="nama_anggota" class="form-control" id="nama_anggota" value="{{ $anggotas[0]->nama_anggota }}">
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" name="jk_anggota" class="form-control" id="jk_anggota" value="{{ $anggotas[0]->jk_anggota }}" hidden>
                         </div>
                         {{-- <div class="mb-2">
                             <label for="jk_anggota" class="form-label">Jenis Kelamin Anggota</label>

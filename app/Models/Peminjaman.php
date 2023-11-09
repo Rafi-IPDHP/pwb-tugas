@@ -18,12 +18,12 @@ class Peminjaman extends Model
     ];
 
     public function anggota() {
-        return $this->hasMany(Anggota::class, 'id_anggota', 'id');
+        return $this->hasMany(Anggota::class, 'id', 'id_anggota');
     }
     public function petugas() {
-        return $this->hasMany(Petugas::class, 'id_petugas', 'id');
+        return $this->hasMany(Petugas::class, 'id', 'id_petugas');
     }
     public function buku() {
-        return $this->hasMany(Buku::class, 'id_buku', 'id');
+        return $this->hasMany(Buku::class, 'id', 'id_buku');
     }
 }

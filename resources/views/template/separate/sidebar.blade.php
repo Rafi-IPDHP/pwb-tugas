@@ -5,7 +5,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-          <a href="#" class="d-block">PERPUSTAKAAN</a>
+          <a href="{{ route('blank_page') }}" class="d-block">PERPUSTAKAAN</a>
         </div>
       </div>
 
@@ -24,24 +24,32 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item">
-            <a href="{{ route('petugas.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
-              <p>
-                Petugas
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ route('anggota.index') }}" class="nav-link">
+            @cannot('isAdmin')
+            <li class="nav-item">
+              <a href="{{ route('petugas.index') }}" class="nav-link @if (Request::segment(1) == 'petugas')
+                  active
+              @endif">
+                <i class="nav-icon fas fa-user"></i>
+                <p>
+                  Petugas
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('anggota.index') }}" class="nav-link @if (Request::segment(1) == 'anggota')
+                active
+            @endif">
               <i class="nav-icon fas fa-users"></i>
               <p>
-                Anggota
-              </p>
+                  Anggota
+                </p>
             </a>
-          </li>
+        </li>
+        @endcannot
           <li class="nav-item">
-            <a href="{{ route('buku.index') }}" class="nav-link">
+            <a href="{{ route('buku.index') }}" class="nav-link @if (Request::segment(1) == 'buku')
+                active
+            @endif">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Buku
@@ -49,7 +57,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('rak.index') }}" class="nav-link @if (Request::segment(1) == 'rak')
+                active
+            @endif">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Rak
@@ -57,7 +67,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('peminjaman.index') }}" class="nav-link @if (Request::segment(1) == 'peminjaman')
+                active
+            @endif">
               <i class="nav-icon fas fa-arrow-right peminjaman"></i>
               <p>
                 Peminjaman
@@ -65,7 +77,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('pengembalian.index') }}" class="nav-link @if (Request::segment(1) == 'pengembalian')
+                active
+            @endif">
               <i class="nav-icon fas fa-arrow-left pengembalian"></i>
               <p>
                 Pengembalian

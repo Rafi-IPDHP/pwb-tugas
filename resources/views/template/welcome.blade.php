@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Library | @yield('title')</title>
 
+    <style>
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+    </style>
+
   <link rel="shortcut icon" href="{{ asset('assets/online-library2.png') }}" type="image/x-icon">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -30,7 +40,7 @@
 
   <!-- /.content-wrapper -->
 
-  @include('template.separate.footer')
+  {{-- @include('template.separate.footer') --}}
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

@@ -53,14 +53,14 @@
                                             </div>
                                             <div class="col">
                                                 <div class="mb-3">
-                                                    <label for="nama_anggota" class="form-label">Nama Anggota</label>
-                                                    <input type="text" name="nama_anggota" class="form-control" id="nama_anggota" placeholder="Masukkan Nama Anda">
+                                                    <label for="username" class="form-label">Username Anggota</label>
+                                                    <input type="text" name="username" class="form-control" id="username" placeholder="Masukkan Username Anda">
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="mb-3">
-                                                    <label for="kode_anggota" class="form-label">Kode Anggota</label>
-                                                    <input type="text" name="password" class="form-control" id="kode_anggota" placeholder="Masukkan Kode Anggota">
+                                                    <label for="password" class="form-label">Password</label>
+                                                    <input type="password" name="password" class="form-control" id="password" placeholder="Masukkan Password Anggota">
                                                 </div>
                                             </div>
                                         </div>
@@ -102,7 +102,7 @@
                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Library</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <form action="{{ route('auth.prosesAnggota') }}" method="post">
+                                <form action="{{ route('auth.prosesPetugas') }}" method="post">
                                     @csrf
                                     <div class="modal-body">
                                         <div class="row d-flex flex-column">
@@ -111,14 +111,17 @@
                                             </div>
                                             <div class="col">
                                                 <div class="mb-3">
-                                                    <label for="nama_petugas" class="form-label">Nama Petugas</label>
-                                                    <input type="text" name="nama_anggota" class="form-control" id="nama_petugas" placeholder="Masukkan Nama Anda">
+                                                    <label for="username" class="form-label">Username Petugas</label>
+                                                    <input type="text" name="username" class="form-control" id="username" placeholder="Masukkan Username Anda">
+                                                    @error('username')
+                                                        {{ $message }}
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="mb-3">
-                                                    <label for="jabatan" class="form-label">Jabatan Petugas</label>
-                                                    <input type="text" name="password" class="form-control" id="jabatan" placeholder="Masukkan Jabatan Anda">
+                                                    <label for="password" class="form-label">Password</label>
+                                                    <input type="password" name="password" class="form-control" id="password" placeholder="Masukkan Password Anda">
                                                 </div>
                                             </div>
                                         </div>
@@ -143,3 +146,40 @@
     <!-- /.content -->
   </div>
 @endsection
+
+{{-- @extends('template.welcome')
+
+@section('title', 'Blank Page')
+
+@section('content')
+<div class="content-wrapper" style="background-size: cover; background-image: url('{{ asset("assets/library3.jpg") }}');">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+            <div class="row mb-4">
+                <div class="col d-flex justify-content-center">
+                    <h1 class="fw-bold fs-1 text-white" hidden>Library</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="container d-flex align-items-center h-100 mt-5 ps-4">
+            <div class="row d-flex flex-column">
+                <div class="col-auto col-md-auto col-sm-auto" style="font-family: 'poppins';">
+                    <p class="fs-5 text-white fw-semibold mb-0" style="text-shadow: 2px 2px 4px #000000;">Welcome to</p>
+                    <p class="text-white fw-bold mt-0" style="font-size: 80px; line-height: 80px; text-shadow: 2px 2px 4px #000000;">Online <img src="{{ asset('assets/online-library2.png') }}" alt="..." style="width: 70px;" class="mb-3 ms-2"></p>
+                    <p class="fw-bold mt-0" style="font-size: 80px; line-height: 30px; margin-left: 90px; text-shadow: 2px 2px 4px #000000; color: #ffffff;">Library</p>
+                    <p class="fs-5 text-white fw-semibold mt-4 mb-0 text-shadow: 2px 2px 4px #000000;">Knowledge at Your</p>
+                    <p class="fs-5 text-white fw-semibold mt-0" style="line-height: 10px; margin-left: 130px; text-shadow: 2px 2px 4px #000000;">Fingertips</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+@endsection --}}

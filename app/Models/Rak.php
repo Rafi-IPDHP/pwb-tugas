@@ -16,6 +16,6 @@ class Rak extends Model
     ];
 
     public function buku() {
-        return $this->hasMany(Buku::class, 'id_buku', 'id');
+        return $this->hasMany(Buku::class, 'id', 'id_buku');
     }
 }

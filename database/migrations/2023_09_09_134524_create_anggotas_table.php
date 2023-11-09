@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('anggotas', function (Blueprint $table) {
             $table->id();
+            $table->string('username');
+            $table->string('password');
             $table->string('kode_anggota', 9);
             $table->string('nama_anggota', 100);
             $table->char('jk_anggota', 1);

@@ -15,9 +15,8 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'anggotas',
+        'passwords' => 'users',
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
